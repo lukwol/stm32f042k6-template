@@ -1,10 +1,10 @@
-/* Linker script for the STM32F070RB */
+/* Linker script for the STM32F042K6T6 */
 
 MEMORY
 {
   /* NOTE K = KiBi = 1024 bytes */
-  FLASH : ORIGIN = 0x08000000, LENGTH = 128K
-  RAM : ORIGIN = 0x20000000, LENGTH = 16K
+  FLASH : ORIGIN = 0x08000000, LENGTH = 32K
+  RAM : ORIGIN = 0x20000000, LENGTH = 6K
 }
 
 /* This is where the call stack will be allocated. */

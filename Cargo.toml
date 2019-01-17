@@ -12,8 +12,8 @@ panic-halt = "*"
 
 [dependencies.stm32f0xx-hal]
 version = "*"
-features = ["stm32f070xb"]
-# features = ["stm32f070xb", "rt"]
+features = ["stm32f042"]
+# features = ["stm32f042", "rt"]
 
 # this lets you use `cargo fix`!
 [[bin]]
