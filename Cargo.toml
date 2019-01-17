@@ -1,0 +1,27 @@
+[package]
+authors = ["{{authors}}"]
+edition = "2018"
+readme = "README.md"
+name = "{{project-name}}"
+version = "0.1.0"
+
+[dependencies]
+cortex-m = "*"
+cortex-m-rt = "*"
+panic-halt = "*"
+
+[dependencies.stm32f0xx-hal]
+version = "*"
+features = ["stm32f070xb"]
+# features = ["stm32f070xb", "rt"]
+
+# this lets you use `cargo fix`!
+[[bin]]
+name = "{{project-name}}"
+test = false
+bench = false
+
+[profile.release]
+codegen-units = 1 # better optimizations
+debug = true # symbols are nice and they don't increase the size on Flash
+lto = true # better optimizations
